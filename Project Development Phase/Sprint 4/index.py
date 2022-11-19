@@ -271,9 +271,9 @@ def send():
 		ibm_db.execute(stmt)
 		data = ibm_db.fetch_assoc(stmt)
 		print(data) 
-		message = Mail(from_email='empire44440@gmail.com',to_emails=data['EMAIL'],subject='Sending with Twilio SendGrid is Fun',html_content='<strong>and easy to do anywhere, even with Python</strong>')
+		message = Mail(from_email='deepasomu28@gmail.com',to_emails=data['EMAIL'],subject='Sending with Twilio SendGrid is Fun',html_content='<strong>and easy to do anywhere, even with Python</strong>')
 		try:
-			sg = SendGridAPIClient('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')
+			sg = SendGridAPIClient('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')
 			response = sg.send(message)
 			print(response.status_code)
 			print(response.body)
